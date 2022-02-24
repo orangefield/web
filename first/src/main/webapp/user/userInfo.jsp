@@ -36,7 +36,7 @@
 		pstmt.setInt(1, id);
 
 		ResultSet rs = pstmt.executeQuery();
-		String name = null;
+		String name = null; // rs.next()를 타지 않을 수도 있기 때문에 변수 초기화 해주기
 		String phone = null;
 		while (rs.next()) {
 			name = rs.getString("name");
